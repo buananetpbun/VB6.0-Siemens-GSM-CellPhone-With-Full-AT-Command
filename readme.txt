@@ -7,11 +7,6 @@ with this program you can know how to access siemens with AT+Command.
 For example : AT+CGMI = output [SIEMENS], AT+CGMM = output [C45], Access Midi (sound) = AT^SBNW="mid",0,1 > 4D5468640000000..... (CTRL-Z)
 , Access Logo = example : AT^SBNW="bmp",0,0 and any other.  
 
+<img border="0" src="https://www.planet-source-code.com/upload_PSC/screenshots/PIC2002104318386246.gif" />
 
-Copyright © 2002 AVACO, Pp
-By Agus Ramadhani
-All rights reserved
-Email : Avaco_Soft22@Yahoo.com
-Email : Avaco@9cy.com
-Http://Avaco-Software.tripod.com
 
