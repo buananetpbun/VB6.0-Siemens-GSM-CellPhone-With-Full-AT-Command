@@ -1,0 +1,293 @@
+
+' ***********************************************************
+' AT+COMMAND For : S35i-A  
+' Run this script with your mobile telephone 
+' TA manufacturer
+' ***********************************************************
+AT+GMI
+SIEMENS
+OK
+AT+GMM
+Gipsy Soft Protocolstack
+OK
+AT+GMR
+V2.540
+OK
+AT+GSN
+<deleted>
+OK
+AT+GOI
+ERROR
+AT+GCI
+ERROR
+AT+GCAP
++GCAP: +CGSM,+W,+FCLASS
+OK
+AT+CGMI
+SIEMENS
+OK
+AT+CGMM
+S35i
+OK
+AT+CGMR
+11
+OK
+AT+CGSN
+<deleted>
+OK
+AT+CSCS=?
++CSCS: ("GSM","UCS2")
+OK
+AT+CIMI=?
+OK
+AT+CXXCID=?
+ERROR
+AT+CMUX=?
+ERROR
+AT+CSTA=?
+ERROR
+AT+CMOD=?
+ERROR
+AT+CHUP=?
+OK
+AT+CBST=?
++CBST: (0,4,6,7,68,70,71),(0),(1)
+OK
+AT+CRLP=?
++CRLP: (0-61),(0-61),(48-255),(1-255)
+OK
+AT+CR=?
++CR: (0,1)
+OK
+AT+CEER=?
+OK
+AT+CRC=?
++CRC: (0,1)
+OK
+AT+CHSD=?
+ERROR
+AT+CHST=?
+ERROR
+AT+CHSN=?
+ERROR
+AT+CHSC=?
+ERROR
+AT+CHSR=?
+ERROR
+AT+CHSU=?
+ERROR
+AT+CSNS=?
+ERROR
+AT+CXXSN=?
+ERROR
+AT+CXXMOC=?
+ERROR
+AT+CVHU=?
+ERROR
+AT+CV120=?
+ERROR
+AT+CNUM=?
+ERROR
+AT+CREG=?
++CREG: (0,1)
+OK
+AT+COPS=?
+ERROR
+AT+CPWD=?
++CPWD: ("PS",8),("SC",8),("AO",4),("OI",4),("OX",4),("AI",4),("IR",4),("AB",4),("
+AG",4),("AC",4),("P2",8)
+OK
+AT+CLIP=?
++CLIP: (0,1)
+OK
+AT+CLIR=?
+ERROR
+AT+COLP=?
+ERROR
+AT+CCUG=?
+ERROR
+AT+CCFC=?
++CCFC: (0-5)
+OK
+AT+CCWA=?
+ERROR
+AT+CHLD=?
++CHLD: (0,1,1X,2,2X,3)
+OK
+AT+CTFR=?
+ERROR
+AT+CUSD=?
+ERROR
+AT+CAOC=?
++CAOC: (0)
+OK
+AT+CSSN=?
++CSSN: (0,1),(0,1)
+OK
+AT+CLCC=?
+OK
+AT+CPOL=?
+ERROR
+AT+COPN=?
+OK
+AT+CPAS=?
++CPAS: (0,3,4)
+OK
+AT+CFUN=?
+ERROR
+AT+CPOF=?
+ERROR
+AT+CPIN=?
+OK
+AT+CPIN2=?
+ERROR
+AT+CBC=?
++CBC: (0-1),(0-100)
+OK
+AT+CMEC=?
+ERROR
+AT+CKPD=?
+ERROR
+AT+CDIS=?
+ERROR
+AT+CIND=?
+ERROR
+AT+CMER=?
+ERROR
+AT+CSQ=?
++CSQ: (0-31,99),(0-7,99)
+OK
+AT+CPBS=?
++CPBS: ("FD","SM","ON","ME","LD","MC","RC")
+OK
+AT+CPBR=?
++CPBR: (1-75),20,12
+OK
+AT+CPBF=?
+ERROR
+AT+CPBW=?
++CPBW: (1-75),20,(128-255),12
+OK
+AT+CCLK=?
+OK
+AT+CALA=?
+ERROR
+AT+CSIM=?
+ERROR
+AT+CRSM=?
+OK
+AT+CSCC=?
+ERROR
+AT+CALM=?
++CALM: (0-2)
+OK
+AT+CRSL=?
++CRSL: (1-5)
+OK
+AT+CVIB=?
++CVIB: (0,1)
+OK
+AT+CLVL=?
++CLVL: (0-4)
+OK
+AT+CMUT=?
++CMUT: (0,1)
+OK
+AT+CACM=?
+OK
+AT+CAMM=?
+OK
+AT+CPUC=?
+OK
+AT+CCWE=?
+ERROR
+AT+CPWC=?
+ERROR
+AT+CLAN=?
+ERROR
+AT+CLAE=?
+ERROR
+AT+CSGT=?
+ERROR
+AT+CSVM=?
+ERROR
+AT+CRMP=?
+ERROR
+AT+CMAR=?
+ERROR
+AT+CLAC
+ERROR
+AT+CMEE=?
++CMEE: (0-2)
+OK
+AT+CESP=?
+ERROR
+AT+CSMS=?
++CSMS: (0,1)
+OK
+AT+CPMS=?
++CPMS: ("SM"),("SM"),("SM")
+OK
+AT+CMGF=?
++CMGF: (0)
+OK
+AT+CSCA=?
+OK
+AT+CMGF=1
+ERROR
+AT+CSMP=?
+ERROR
+AT+CSDH=?
+ERROR
+AT+CMGL=?
++CMGL: (0-4)
+OK
+AT+CMGR=?
+OK
+AT+CNMA=?
+ERROR
+AT+CMGS=?
+OK
+AT+CMSS=?
+OK
+AT+CMGW=?
+OK
+AT+CMGD=?
+OK
+AT+CMGC=?
+OK
+AT+CMGF=0
+OK
+AT+CMGL=?
++CMGL: (0-4)
+OK
+AT+CMGR=?
+OK
+AT+CNMA=?
+ERROR
+AT+CMGS=?
+OK
+AT+CMSS=?
+OK
+AT+CMGW=?
+OK
+AT+CMGD=?
+OK
+AT+CMGC=?
+OK
+AT+CSCB=?
++CSCB: (0,1)
+OK
+AT+CSAS=?
+ERROR
+AT+CRES=?
+ERROR
+AT+CNMI=?
++CNMI: (0,1),(0,1),(0,2),(0,2),(1)
+OK
+AT+CMMS=?
++CMMS: (0-2)
+OK
+
+' Complite AT-Command For Siemens S35i-A
+

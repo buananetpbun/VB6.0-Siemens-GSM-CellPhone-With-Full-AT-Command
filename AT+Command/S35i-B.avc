@@ -1,0 +1,774 @@
+
+' *************************************************************
+' AT+COMMAND For : S35i-B  
+' According to ITU-T V.25ter
+' only the commands which effect GSM/UMTS
+' ************************************************************* 
+>>> "AT\r"
+<<< "AT\nOK"
+>>> "ATQ0E1V1\r"
+<<< "ATQ0E1V1\nOK"
+# cquery 4.14b
+# +GMI (TA manufacturer)
+>>> "AT+GMI\r"
+<<< "AT+GMI\nSIEMENS\n\nOK"
+AT+GMI
+SIEMENS
+# +GMM (TA model)
+>>> "AT+GMM\r"
+<<< "AT+GMM\nGipsy Soft Protocolstack\n\nOK"
+AT+GMM
+Gipsy Soft Protocolstack
+# +GMR (TA revision)
+>>> "AT+GMR\r"
+<<< "AT+GMR\nV2.540\n\nOK"
+AT+GMR
+V2.540
+# +GSN (TA serial number)
+>>> "AT+GSN\r"
+<<< "AT+GSN\n<deleted>\n\nOK"
+AT+GSN
+<deleted>
+# +GOI (Global Object Identification)
+>>> "AT+GOI\r"
+<<< "AT+GOI\nERROR\n"
+AT+GOI
+ERROR
+# +GCI (Country of installation)
+>>> "AT+GCI\r"
+<<< "AT+GCI\nERROR\n"
+AT+GCI
+ERROR
+# +GCAP (Capabilities)
+>>> "AT+GCAP\r"
+<<< "AT+GCAP\n+GCAP: +CGSM,+W,+FCLASS\n\nOK"
+AT+GCAP
++GCAP: +CGSM,+W,+FCLASS
+# +CGMI (ME manufacturer)
+>>> "AT+CGMI\r"
+<<< "AT+CGMI\nSIEMENS\n\nOK"
+AT+CGMI
+SIEMENS
+# +CGMM (ME model)
+>>> "AT+CGMM\r"
+<<< "AT+CGMM\nS35i\n\nOK"
+AT+CGMM
+S35i
+# +CGMR (ME revison)
+>>> "AT+CGMR\r"
+<<< "AT+CGMR\n18\n\nOK"
+AT+CGMR
+18
+# +CGSN (ME serial number aka IMEI)
+>>> "AT+CGSN\r"
+<<< "AT+CGSN\n<deleted>\n\nOK"
+AT+CGSN
+<deleted>
+# +CSCS=? (TE character set)
+>>> "AT+CSCS=?\r"
+<<< "AT+CSCS=?\n+CSCS: (\"GSM\",\"UCS2\")\n\nOK"
+AT+CSCS=?
++CSCS: ("GSM","UCS2")
+# +CIMI=? (International mobile subscriber identity)
+>>> "AT+CIMI=?\r"
+<<< "AT+CIMI=?\nOK"
+AT+CIMI=?
+# +CMUX=? (Multiplexing mode)
+>>> "AT+CMUX=?\r"
+<<< "AT+CMUX=?\nERROR\n"
+AT+CMUX=?
+ERROR
+# +CSTA=? (Select type of address)
+>>> "AT+CSTA=?\r"
+<<< "AT+CSTA=?\nERROR\n"
+AT+CSTA=?
+ERROR
+# +CMOD=? (Call mode)
+>>> "AT+CMOD=?\r"
+<<< "AT+CMOD=?\nERROR\n"
+AT+CMOD=?
+ERROR
+# +CHUP=? (Hangup call)
+>>> "AT+CHUP=?\r"
+<<< "AT+CHUP=?\nOK"
+AT+CHUP=?
+# +CBST=? (Bearer service type)
+>>> "AT+CBST=?\r"
+<<< "AT+CBST=?\n+CBST: (0,4,6,7,68,70,71),(0),(1)\n\nOK"
+AT+CBST=?
++CBST: (0,4,6,7,68,70,71),(0),(1)
+# +CRLP=? (Radio link protocol)
+>>> "AT+CRLP=?\r"
+<<< "AT+CRLP=?\n+CRLP: (0-61),(0-61),(48-255),(1-255)\n\nOK"
+AT+CRLP=?
++CRLP: (0-61),(0-61),(48-255),(1-255)
+# +CR=? (Service reporting control)
+>>> "AT+CR=?\r"
+<<< "AT+CR=?\n+CR: (0,1)\n\nOK"
+AT+CR=?
++CR: (0,1)
+# +CEER=? (Extended error report)
+>>> "AT+CEER=?\r"
+<<< "AT+CEER=?\nOK"
+AT+CEER=?
+# +CRC=? (Cellular result codes)
+>>> "AT+CRC=?\r"
+<<< "AT+CRC=?\n+CRC: (0,1)\n\nOK"
+AT+CRC=?
++CRC: (0,1)
+# +CHSD=? (HSCSD device parameters)
+>>> "AT+CHSD=?\r"
+<<< "AT+CHSD=?\nERROR\n"
+AT+CHSD=?
+ERROR
+# +CHST=? (HSCSD transparent call configuration)
+>>> "AT+CHST=?\r"
+<<< "AT+CHST=?\nERROR\n"
+AT+CHST=?
+ERROR
+# +CHSN=? (HSCSD non-transparent call configuration)
+>>> "AT+CHSN=?\r"
+<<< "AT+CHSN=?\nERROR\n"
+AT+CHSN=?
+ERROR
+# +CHSC=? (HSCSD current call parameters)
+>>> "AT+CHSC=?\r"
+<<< "AT+CHSC=?\nERROR\n"
+AT+CHSC=?
+ERROR
+# +CHSR=? (HSCSD parameters report)
+>>> "AT+CHSR=?\r"
+<<< "AT+CHSR=?\nERROR\n"
+AT+CHSR=?
+ERROR
+# +CHSU=? (HSCSD automatic user initiated upgrading)
+>>> "AT+CHSU=?\r"
+<<< "AT+CHSU=?\nERROR\n"
+AT+CHSU=?
+ERROR
+# +CHSA=? (HSCSD non-transparent asymmetry configuration)
+>>> "AT+CHSA=?\r"
+<<< "AT+CHSA=?\nERROR\n"
+AT+CHSA=?
+ERROR
+# +CSNS=? (Single numbering scheme)
+>>> "AT+CSNS=?\r"
+<<< "AT+CSNS=?\nERROR\n"
+AT+CSNS=?
+ERROR
+# +CVHU=? (Voice hang up control)
+>>> "AT+CVHU=?\r"
+<<< "AT+CVHU=?\nERROR\n"
+AT+CVHU=?
+ERROR
+# +CV120=? (V.120 rate adaption control)
+>>> "AT+CV120=?\r"
+<<< "AT+CV120=?\nERROR\n"
+AT+CV120=?
+ERROR
+# +CSDF=? (Settings date format)
+>>> "AT+CSDF=?\r"
+<<< "AT+CSDF=?\nERROR\n"
+AT+CSDF=?
+ERROR
+# +CSIL=? (Silence command)
+>>> "AT+CSIL=?\r"
+<<< "AT+CSIL=?\nERROR\n"
+AT+CSIL=?
+ERROR
+# +CSTF=? (Settings time format)
+>>> "AT+CSTF=?\r"
+<<< "AT+CSTF=?\nERROR\n"
+AT+CSTF=?
+ERROR
+# +CNUM=? (Subscriber number)
+>>> "AT+CNUM=?\r"
+<<< "AT+CNUM=?\nERROR\n"
+AT+CNUM=?
+ERROR
+# +CREG=? (Network registration)
+>>> "AT+CREG=?\r"
+<<< "AT+CREG=?\n+CREG: (0,1)\n\nOK"
+AT+CREG=?
++CREG: (0,1)
+# +COPS=? (Operator selection)
+>>> "AT+COPS=?\r"
+<<< "AT+COPS=?\n+COPS: (2,\"Westel\",,\"21630\"),(3,\"H PANNON GSM\",,\"21601\"),(3,\"vodafone\",,\"21670\"),,(0,1,3,4),(0,2)\n\nOK"
+AT+COPS=?
++COPS: (2,"Westel",,"21630"),(3,"H PANNON GSM",,"21601"),(3,"vodafone",,"21670"),,(0,1,3,4),(0,2)
+# +CLCK=? (Facility lock)
+>>> "AT+CLCK=?\r"
+<<< "AT+CLCK=?\n+CLCK: (\"CS\",\"PS\",\"SC\",\"AO\",\"OI\",\"OX\",\"AI\",\"IR\",\"AB\",\"AG\",\"AC\",\"FD\")\n\nOK"
+AT+CLCK=?
++CLCK: ("CS","PS","SC","AO","OI","OX","AI","IR","AB","AG","AC","FD")
+# +CPWD=? (Change password)
+>>> "AT+CPWD=?\r"
+<<< "AT+CPWD=?\n+CPWD: (\"PS\",8),(\"SC\",8),(\"AO\",4),(\"OI\",4),(\"OX\",4),(\"AI\",4),(\"IR\",4),(\"AB\",4),(\"AG\",4),(\"AC\",4),(\"P2\",8)\n\nOK"
+AT+CPWD=?
++CPWD: ("PS",8),("SC",8),("AO",4),("OI",4),("OX",4),("AI",4),("IR",4),("AB",4),("AG",4),("AC",4),("P2",8)
+# +CLIP=? (Calling line identification presentation)
+>>> "AT+CLIP=?\r"
+<<< "AT+CLIP=?\n+CLIP: (0,1)\n\nOK"
+AT+CLIP=?
++CLIP: (0,1)
+# +CLIR=? (Calling line identification restriction)
+>>> "AT+CLIR=?\r"
+<<< "AT+CLIR=?\nERROR\n"
+AT+CLIR=?
+ERROR
+# +COLP=? (Connected line identification presentation)
+>>> "AT+COLP=?\r"
+<<< "AT+COLP=?\nERROR\n"
+AT+COLP=?
+ERROR
+# +CDIP=? (Called line identification presentation)
+>>> "AT+CDIP=?\r"
+<<< "AT+CDIP=?\nERROR\n"
+AT+CDIP=?
+ERROR
+# +CCUG=? (Closed user group)
+>>> "AT+CCUG=?\r"
+<<< "AT+CCUG=?\nERROR\n"
+AT+CCUG=?
+ERROR
+# +CCFC=? (Call forwarding)
+>>> "AT+CCFC=?\r"
+<<< "AT+CCFC=?\n+CCFC: (0-5)\n\nOK"
+AT+CCFC=?
++CCFC: (0-5)
+# +CCWA=? (Call waiting)
+>>> "AT+CCWA=?\r"
+<<< "AT+CCWA=?\nERROR\n"
+AT+CCWA=?
+ERROR
+# +CHLD=? (Call and hold multiparty)
+>>> "AT+CHLD=?\r"
+<<< "AT+CHLD=?\n+CHLD: (0,1,1X,2,2X,3)\n\nOK"
+AT+CHLD=?
++CHLD: (0,1,1X,2,2X,3)
+# +CTFR=? (Call transfer)
+>>> "AT+CTFR=?\r"
+<<< "AT+CTFR=?\nERROR\n"
+AT+CTFR=?
+ERROR
+# +CUSD=? (Unstructured supplementary service data)
+>>> "AT+CUSD=?\r"
+<<< "AT+CUSD=?\nERROR\n"
+AT+CUSD=?
+ERROR
+# +CAOC=? (Advice of charge)
+>>> "AT+CAOC=?\r"
+<<< "AT+CAOC=?\n+CAOC: (0)\n\nOK"
+AT+CAOC=?
++CAOC: (0)
+# +CSSN=? (Supplementary service notifications)
+>>> "AT+CSSN=?\r"
+<<< "AT+CSSN=?\n+CSSN: (0,1),(0,1)\n\nOK"
+AT+CSSN=?
++CSSN: (0,1),(0,1)
+# +CLCC=? (List current calls)
+>>> "AT+CLCC=?\r"
+<<< "AT+CLCC=?\nOK"
+AT+CLCC=?
+# +CPOL=? (Preferred operator list)
+>>> "AT+CPOL=?\r"
+<<< "AT+CPOL=?\nERROR\n"
+AT+CPOL=?
+ERROR
+# +COPN=? (Read operator names)
+>>> "AT+COPN=?\r"
+<<< "AT+COPN=?\nOK"
+AT+COPN=?
+# +CAEMLPP=? (eMLPP Priority Registration and Interrogation)
+>>> "AT+CAEMLPP=?\r"
+<<< "AT+CAEMLPP=?\nERROR\n"
+AT+CAEMLPP=?
+ERROR
+# +CPAS=? (Phone activity status)
+>>> "AT+CPAS=?\r"
+<<< "AT+CPAS=?\n+CPAS: (0,3,4)\n\nOK"
+AT+CPAS=?
++CPAS: (0,3,4)
+# +CFUN=? (Set phone functionality)
+>>> "AT+CFUN=?\r"
+<<< "AT+CFUN=?\nERROR\n"
+AT+CFUN=?
+ERROR
+# +CPIN=? (Enter PIN)
+>>> "AT+CPIN=?\r"
+<<< "AT+CPIN=?\nOK"
+AT+CPIN=?
+# +CBC=? (Battery charge)
+>>> "AT+CBC=?\r"
+<<< "AT+CBC=?\n+CBC: (0-1),(0-100)\n\nOK"
+AT+CBC=?
++CBC: (0-1),(0-100)
+# +CSQ=? (Signal quality)
+>>> "AT+CSQ=?\r"
+<<< "AT+CSQ=?\n+CSQ: (0-31,99),(0-7,99)\n\nOK"
+AT+CSQ=?
++CSQ: (0-31,99),(0-7,99)
+# +CMEC=? (ME control mode)
+>>> "AT+CMEC=?\r"
+<<< "AT+CMEC=?\nERROR\n"
+AT+CMEC=?
+ERROR
+# +CKPD=? (Keypad control)
+>>> "AT+CKPD=?\r"
+<<< "AT+CKPD=?\nERROR\n"
+AT+CKPD=?
+ERROR
+# +CDIS=? (Display control)
+>>> "AT+CDIS=?\r"
+<<< "AT+CDIS=?\nERROR\n"
+AT+CDIS=?
+ERROR
+# +CIND=? (Indicator control)
+>>> "AT+CIND=?\r"
+<<< "AT+CIND=?\nERROR\n"
+AT+CIND=?
+ERROR
+# +CMER=? (ME event reporting)
+>>> "AT+CMER=?\r"
+<<< "AT+CMER=?\nERROR\n"
+AT+CMER=?
+ERROR
+# +CPBS=? (Select phonebook memory storage)
+>>> "AT+CPBS=?\r"
+<<< "AT+CPBS=?\n+CPBS: (\"FD\",\"SM\",\"ON\",\"ME\",\"LD\",\"MC\",\"RC\")\n\nOK"
+AT+CPBS=?
++CPBS: ("FD","SM","ON","ME","LD","MC","RC")
+# +CPBR=? (Read phonebook entries)
+>>> "AT+CPBR=?\r"
+<<< "AT+CPBR=?\n+CPBR: (1-200),20,16\n\nOK"
+AT+CPBR=?
++CPBR: (1-200),20,16
+# +CPBF=? (Find phonebook entries)
+>>> "AT+CPBF=?\r"
+<<< "AT+CPBF=?\nERROR\n"
+AT+CPBF=?
+ERROR
+# +CPBW=? (Write phonebook entry)
+>>> "AT+CPBW=?\r"
+<<< "AT+CPBW=?\n+CPBW: (1-200),20,(128-255),16\n\nOK"
+AT+CPBW=?
++CPBW: (1-200),20,(128-255),16
+# +CCLK=? (Clock)
+>>> "AT+CCLK=?\r"
+<<< "AT+CCLK=?\nOK"
+AT+CCLK=?
+# +CALA=? (Alarm)
+>>> "AT+CALA=?\r"
+<<< "AT+CALA=?\nERROR\n"
+AT+CALA=?
+ERROR
+# +CSIM=? (Generic SIM access)
+>>> "AT+CSIM=?\r"
+<<< "AT+CSIM=?\nERROR\n"
+AT+CSIM=?
+ERROR
+# +CRSM=? (Restricted SIM access)
+>>> "AT+CRSM=?\r"
+<<< "AT+CRSM=?\nOK"
+AT+CRSM=?
+# +CSCC=? (Secure control command)
+>>> "AT+CSCC=?\r"
+<<< "AT+CSCC=?\nERROR\n"
+AT+CSCC=?
+ERROR
+# +CALM=? (Select ringing tone)
+>>> "AT+CALM=?\r"
+<<< "AT+CALM=?\n+CALM: (0-2)\n\nOK"
+AT+CALM=?
++CALM: (0-2)
+# +CRSL=? (Ringing tone level)
+>>> "AT+CRSL=?\r"
+<<< "AT+CRSL=?\n+CRSL: (1-5)\n\nOK"
+AT+CRSL=?
++CRSL: (1-5)
+# +CVIB=? (Vibrator tone)
+>>> "AT+CVIB=?\r"
+<<< "AT+CVIB=?\n+CVIB: (0,1)\n\nOK"
+AT+CVIB=?
++CVIB: (0,1)
+# +CLVL=? (Volume control)
+>>> "AT+CLVL=?\r"
+<<< "AT+CLVL=?\n+CLVL: (0-4)\n\nOK"
+AT+CLVL=?
++CLVL: (0-4)
+# +CMUT=? (Mute microphone)
+>>> "AT+CMUT=?\r"
+<<< "AT+CMUT=?\n+CMUT: (0,1)\n\nOK"
+AT+CMUT=?
++CMUT: (0,1)
+# +CACM=? (Accumulated call meter)
+>>> "AT+CACM=?\r"
+<<< "AT+CACM=?\nOK"
+AT+CACM=?
+# +CAMM=? (Accumulated call meter maximum)
+>>> "AT+CAMM=?\r"
+<<< "AT+CAMM=?\nOK"
+AT+CAMM=?
+# +CPUC=? (Price per unit and currency table)
+>>> "AT+CPUC=?\r"
+<<< "AT+CPUC=?\nOK"
+AT+CPUC=?
+# +CCWE=? (Call meter maximum event)
+>>> "AT+CCWE=?\r"
+<<< "AT+CCWE=?\nERROR\n"
+AT+CCWE=?
+ERROR
+# +CPWC=? (Power class)
+>>> "AT+CPWC=?\r"
+<<< "AT+CPWC=?\nERROR\n"
+AT+CPWC=?
+ERROR
+# +CLAN=? (Set language)
+>>> "AT+CLAN=?\r"
+<<< "AT+CLAN=?\nERROR\n"
+AT+CLAN=?
+ERROR
+# +CLAE=? (Language event)
+>>> "AT+CLAE=?\r"
+<<< "AT+CLAE=?\nERROR\n"
+AT+CLAE=?
+ERROR
+# +CSGT=? (Set greeting text)
+>>> "AT+CSGT=?\r"
+<<< "AT+CSGT=?\nERROR\n"
+AT+CSGT=?
+ERROR
+# +CSVM=? (Set voice mail number)
+>>> "AT+CSVM=?\r"
+<<< "AT+CSVM=?\nERROR\n"
+AT+CSVM=?
+ERROR
+# +CRMP=? (Ring melody playback)
+>>> "AT+CRMP=?\r"
+<<< "AT+CRMP=?\nERROR\n"
+AT+CRMP=?
+ERROR
+# +CMAR=? (Master reset)
+>>> "AT+CMAR=?\r"
+<<< "AT+CMAR=?\nERROR\n"
+AT+CMAR=?
+ERROR
+# +CLAC (List all available AT commands)
+>>> "AT+CLAC\r"
+<<< "AT+CLAC\nERROR\n"
+AT+CLAC
+ERROR
+# +CALD=? (Delete alarm)
+>>> "AT+CALD=?\r"
+<<< "AT+CALD=?\nERROR\n"
+AT+CALD=?
+ERROR
+# +CAPD=? (Postpone or dismiss an alarm)
+>>> "AT+CAPD=?\r"
+<<< "AT+CAPD=?\nERROR\n"
+AT+CAPD=?
+ERROR
+# +CTZU=? (Automatic time zone update)
+>>> "AT+CTZU=?\r"
+<<< "AT+CTZU=?\nERROR\n"
+AT+CTZU=?
+ERROR
+# +CTZR=? (Time zone reporting)
+>>> "AT+CTZR=?\r"
+<<< "AT+CTZR=?\nERROR\n"
+AT+CTZR=?
+ERROR
+# +CPROT=? (Enter protocol mode)
+>>> "AT+CPROT=?\r"
+<<< "AT+CPROT=?\nERROR\n"
+AT+CPROT=?
+ERROR
+# +CMEE=? (ME error reporting)
+>>> "AT+CMEE=?\r"
+<<< "AT+CMEE=?\n+CMEE: (0-2)\n\nOK"
+AT+CMEE=?
++CMEE: (0-2)
+# +CGDCONT=? (Define PDP context)
+>>> "AT+CGDCONT=?\r"
+<<< "AT+CGDCONT=?\nERROR\n"
+AT+CGDCONT=?
+ERROR
+# +CGDSCONT=? (Define Secondary PDP context)
+>>> "AT+CGDSCONT=?\r"
+<<< "AT+CGDSCONT=?\nERROR\n"
+AT+CGDSCONT=?
+ERROR
+# +CGTFT=? (Traffic Flow Template)
+>>> "AT+CGTFT=?\r"
+<<< "AT+CGTFT=?\nERROR\n"
+AT+CGTFT=?
+ERROR
+# +CGQREQ=? (QoS profile (requested))
+>>> "AT+CGQREQ=?\r"
+<<< "AT+CGQREQ=?\nERROR\n"
+AT+CGQREQ=?
+ERROR
+# +CGQMIN=? (QoS profile (minimum acceptable))
+>>> "AT+CGQMIN=?\r"
+<<< "AT+CGQMIN=?\nERROR\n"
+AT+CGQMIN=?
+ERROR
+# +CGEQREQ=? (3G QoS profile (requested))
+>>> "AT+CGEQREQ=?\r"
+<<< "AT+CGEQREQ=?\nERROR\n"
+AT+CGEQREQ=?
+ERROR
+# +CGEQMIN=? (3G QoS profile (minimum acceptable))
+>>> "AT+CGEQMIN=?\r"
+<<< "AT+CGEQMIN=?\nERROR\n"
+AT+CGEQMIN=?
+ERROR
+# +CGEQNEG=? (3G QoS profile (negotiated))
+>>> "AT+CGEQNEG=?\r"
+<<< "AT+CGEQNEG=?\nERROR\n"
+AT+CGEQNEG=?
+ERROR
+# +CGATT=? (GPRS attach/detach)
+>>> "AT+CGATT=?\r"
+<<< "AT+CGATT=?\nERROR\n"
+AT+CGATT=?
+ERROR
+# +CGACT=? (PDP context activate/deactivate)
+>>> "AT+CGACT=?\r"
+<<< "AT+CGACT=?\nERROR\n"
+AT+CGACT=?
+ERROR
+# +CGCMOD=? (PDP context modify)
+>>> "AT+CGCMOD=?\r"
+<<< "AT+CGCMOD=?\nERROR\n"
+AT+CGCMOD=?
+ERROR
+# +CGDATA=? (Enter data state)
+>>> "AT+CGDATA=?\r"
+<<< "AT+CGDATA=?\nERROR\n"
+AT+CGDATA=?
+ERROR
+# +CGCLOSP=? (Configure local octet stream PAD parameters)
+>>> "AT+CGCLOSP=?\r"
+<<< "AT+CGCLOSP=?\nERROR\n"
+AT+CGCLOSP=?
+ERROR
+# +CGPADDR=? (Show PDP address)
+>>> "AT+CGPADDR=?\r"
+<<< "AT+CGPADDR=?\nERROR\n"
+AT+CGPADDR=?
+ERROR
+# +CGAUTO=? (Automatic response to a network request for PDP context activation)
+>>> "AT+CGAUTO=?\r"
+<<< "AT+CGAUTO=?\nERROR\n"
+AT+CGAUTO=?
+ERROR
+# +CGANS=? (Manual response to a network request for PDP context activation)
+>>> "AT+CGANS=?\r"
+<<< "AT+CGANS=?\nERROR\n"
+AT+CGANS=?
+ERROR
+# +CGCLASS=? (GPRS mobile station class)
+>>> "AT+CGCLASS=?\r"
+<<< "AT+CGCLASS=?\nERROR\n"
+AT+CGCLASS=?
+ERROR
+# +CGCLPAD=? (Configure local triple-X PAD parameters)
+>>> "AT+CGCLPAD=?\r"
+<<< "AT+CGCLPAD=?\nERROR\n"
+AT+CGCLPAD=?
+ERROR
+# +CGEREP=? (GPRS event reporting)
+>>> "AT+CGEREP=?\r"
+<<< "AT+CGEREP=?\nERROR\n"
+AT+CGEREP=?
+ERROR
+# +CGREG=? (GPRS network registration status)
+>>> "AT+CGREG=?\r"
+<<< "AT+CGREG=?\nERROR\n"
+AT+CGREG=?
+ERROR
+# +CGSMS=? (Select service for MO SMS messages)
+>>> "AT+CGSMS=?\r"
+<<< "AT+CGSMS=?\nERROR\n"
+AT+CGSMS=?
+ERROR
+# +CAJOIN=? (Accept an incoming Voice Group or Voice Broadcast Call)
+>>> "AT+CAJOIN=?\r"
+<<< "AT+CAJOIN=?\nERROR\n"
+AT+CAJOIN=?
+ERROR
+# +CAREJ=? (Reject an incoming Voice Group or Voice Broadcast Call)
+>>> "AT+CAREJ=?\r"
+<<< "AT+CAREJ=?\nERROR\n"
+AT+CAREJ=?
+ERROR
+# +CAHLD=? (Leave an ongoing Voice Group or Voice Broadcast Call)
+>>> "AT+CAHLD=?\r"
+<<< "AT+CAHLD=?\nERROR\n"
+AT+CAHLD=?
+ERROR
+# +CAPTT=? (Talker Access for Voice Group Call)
+>>> "AT+CAPTT=?\r"
+<<< "AT+CAPTT=?\nERROR\n"
+AT+CAPTT=?
+ERROR
+# +CAULEV=? (Voice Group Call Uplink Status Presentation)
+>>> "AT+CAULEV=?\r"
+<<< "AT+CAULEV=?\nERROR\n"
+AT+CAULEV=?
+ERROR
+# +CALCC=? (List current Voice Group and Voice Broadcast Calls)
+>>> "AT+CALCC=?\r"
+<<< "AT+CALCC=?\nERROR\n"
+AT+CALCC=?
+ERROR
+# +CASP=? (Voice Group or Voice Broadcast Call State Attribute Presentation)
+>>> "AT+CASP=?\r"
+<<< "AT+CASP=?\nERROR\n"
+AT+CASP=?
+ERROR
+# +CANCHEV=? (NCH Support Indication)
+>>> "AT+CANCHEV=?\r"
+<<< "AT+CANCHEV=?\nERROR\n"
+AT+CANCHEV=?
+ERROR
+# +CSMS=? (Select message service)
+>>> "AT+CSMS=?\r"
+<<< "AT+CSMS=?\n+CSMS: (0,1)\n\nOK"
+AT+CSMS=?
++CSMS: (0,1)
+# +CPMS=? (Preferred message store)
+>>> "AT+CPMS=?\r"
+<<< "AT+CPMS=?\n+CPMS: (\"SM\"),(\"SM\"),(\"SM\")\n\nOK"
+AT+CPMS=?
++CPMS: ("SM"),("SM"),("SM")
+# +CMGF=? (Message format)
+>>> "AT+CMGF=?\r"
+<<< "AT+CMGF=?\n+CMGF: (0)\n\nOK"
+AT+CMGF=?
++CMGF: (0)
+# +CESP=? (Enter SMS block mode protocol)
+>>> "AT+CESP=?\r"
+<<< "AT+CESP=?\nERROR\n"
+AT+CESP=?
+ERROR
+# +CSCA=? (Service center address)
+>>> "AT+CSCA=?\r"
+<<< "AT+CSCA=?\nOK"
+AT+CSCA=?
+# +CMGF=1 (Text mode)
+>>> "AT+CMGF=1\r"
+<<< "AT+CMGF=1\nERROR\n"
+AT+CMGF=1
+ERROR
+# +CSMP=? (Set text mode parameters)
+>>> "AT+CSMP=?\r"
+<<< "AT+CSMP=?\nERROR\n"
+AT+CSMP=?
+ERROR
+# +CSDH=? (Show text mode parameters)
+>>> "AT+CSDH=?\r"
+<<< "AT+CSDH=?\nERROR\n"
+AT+CSDH=?
+ERROR
+# +CMGL=? (List messages (text))
+>>> "AT+CMGL=?\r"
+<<< "AT+CMGL=?\n+CMGL: (0-4)\n\nOK"
+AT+CMGL=?
++CMGL: (0-4)
+# +CMGR=? (Read message (text))
+>>> "AT+CMGR=?\r"
+<<< "AT+CMGR=?\nOK"
+AT+CMGR=?
+# +CNMA=? (New message acknowledgement to ME/TA (text))
+>>> "AT+CNMA=?\r"
+<<< "AT+CNMA=?\nERROR\n"
+AT+CNMA=?
+ERROR
+# +CMGS=? (Send message (text))
+>>> "AT+CMGS=?\r"
+<<< "AT+CMGS=?\nOK"
+AT+CMGS=?
+# +CMSS=? (Send message from storage (text))
+>>> "AT+CMSS=?\r"
+<<< "AT+CMSS=?\nOK"
+AT+CMSS=?
+# +CMGW=? (Write message to memory (text))
+>>> "AT+CMGW=?\r"
+<<< "AT+CMGW=?\nOK"
+AT+CMGW=?
+# +CMGD=? (Delete message (text))
+>>> "AT+CMGD=?\r"
+<<< "AT+CMGD=?\nOK"
+AT+CMGD=?
+# +CMGC=? (Send command (text))
+>>> "AT+CMGC=?\r"
+<<< "AT+CMGC=?\nOK"
+AT+CMGC=?
+# +CMGF=0 (PDU mode)
+>>> "AT+CMGF=0\r"
+<<< "AT+CMGF=0\nOK"
+AT+CMGF=0
+# +CMGL=? (List messages (pdu))
+>>> "AT+CMGL=?\r"
+<<< "AT+CMGL=?\n+CMGL: (0-4)\n\nOK"
+AT+CMGL=?
++CMGL: (0-4)
+# +CMGR=? (Read message (pdu))
+>>> "AT+CMGR=?\r"
+<<< "AT+CMGR=?\nOK"
+AT+CMGR=?
+# +CNMA=? (New message acknowledgement to ME/TA (pdu))
+>>> "AT+CNMA=?\r"
+<<< "AT+CNMA=?\nERROR\n"
+AT+CNMA=?
+ERROR
+# +CMGS=? (Send message (pdu))
+>>> "AT+CMGS=?\r"
+<<< "AT+CMGS=?\nOK"
+AT+CMGS=?
+# +CMSS=? (Send message from storage (pdu))
+>>> "AT+CMSS=?\r"
+<<< "AT+CMSS=?\nOK"
+AT+CMSS=?
+# +CMGW=? (Write message to memory (pdu))
+>>> "AT+CMGW=?\r"
+<<< "AT+CMGW=?\nOK"
+AT+CMGW=?
+# +CMGD=? (Delete message (pdu))
+>>> "AT+CMGD=?\r"
+<<< "AT+CMGD=?\nOK"
+AT+CMGD=?
+# +CMGC=? (Send command (pdu))
+>>> "AT+CMGC=?\r"
+<<< "AT+CMGC=?\nOK"
+AT+CMGC=?
+# +CSCB=? (Select cell broadcast message types)
+>>> "AT+CSCB=?\r"
+<<< "AT+CSCB=?\n+CSCB: (0,1)\n\nOK"
+AT+CSCB=?
++CSCB: (0,1)
+# +CSAS=? (Save settings)
+>>> "AT+CSAS=?\r"
+<<< "AT+CSAS=?\nERROR\n"
+AT+CSAS=?
+ERROR
+# +CRES=? (Restore settings)
+>>> "AT+CRES=?\r"
+<<< "AT+CRES=?\nERROR\n"
+AT+CRES=?
+ERROR
+# +CNMI=? (New message indications to TE)
+>>> "AT+CNMI=?\r"
+<<< "AT+CNMI=?\n+CNMI: (0,1),(0,1),(0,2),(0,2),(1)\n\nOK"
+AT+CNMI=?
++CNMI: (0,1),(0,1),(0,2),(0,2),(1)
+# +CMMS=? (More messages to send)
+>>> "AT+CMMS=?\r"
+<<< "AT+CMMS=?\n+CMMS: (0-2)\n\nOK"
+AT+CMMS=?
++CMMS: (0-2)
+
+' Complite AT-Command For Siemens S35i-B
+

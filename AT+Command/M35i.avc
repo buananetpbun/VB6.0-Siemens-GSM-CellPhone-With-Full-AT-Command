@@ -1,0 +1,420 @@
+
+' ***********************************************************
+' AT+COMMAND For : M35i  
+' Run this script with your mobile telephone 
+' TA manufacturer
+' ***********************************************************
+AT+GMI
+SIEMENS
+OK
+'TA model'
+AT+GMM
+Gipsy Soft Protocolstack
+OK
+'TA revision'
+AT+GMR
+V2.540
+OK
+'TA serial number'
+AT+GSN
+<deleted>
+OK
+'Global Object Identification'
+AT+GOI
+ERROR
+'Country of installation'
+AT+GCI
+ERROR
+'Capabilities'
+AT+GCAP
++GCAP: +CGSM,+W,+FCLASS
+OK
+'ME manufacturer'
+AT+CGMI
+SIEMENS
+OK
+'ME model'
+AT+CGMM
+M35i
+OK
+'ME revison'
+AT+CGMR
+12
+OK
+'ME serial number aka IMEI'
+AT+CGSN
+<deleted>
+OK
+'-----------------
+'commands to check
+'-----------------
+'TE character set'
+AT+CSCS=?
++CSCS: ("GSM","UCS2")
+OK
+'International mobile subscriber identity'
+AT+CIMI=?
+OK
+'Card ID'
+AT+CXXCID=?
+ERROR
+'Multiplexing mode'
+AT+CMUX=?
+ERROR
+'Select type of address'
+AT+CSTA=?
+ERROR
+'Call mode'
+AT+CMOD=?
+ERROR
+'Hangup call'
+AT+CHUP=?
+OK
+'Bearer service type'
+AT+CBST=?
++CBST: (0,4,6,7,68,70,71),(0),(1)
+OK
+'Radio link protocol'
+AT+CRLP=?
++CRLP: (0-61),(0-61),(48-255),(1-255)
+OK
+'Service reporting control'
+AT+CR=?
++CR: (0,1)
+OK
+'Extended error report'
+AT+CEER=?
+OK
+'Cellular result codes'
+AT+CRC=?
++CRC: (0,1)
+OK
+'HSCSD device parameters'
+AT+CHSD=?
+ERROR
+'HSCSD transparent call configuration'
+AT+CHST=?
+ERROR
+'HSCSD non-transparent call configuration'
+AT+CHSN=?
+ERROR
+'HSCSD current call parameters'
+AT+CHSC=?
+ERROR
+'HSCSD parameters report'
+AT+CHSR=?
+ERROR
+'HSCSD automatic user initiated upgrading'
+AT+CHSU=?
+ERROR
+'Single numbering scheme'
+AT+CSNS=?
+ERROR
+'Single numbering parametrization'
+AT+CXXSN=?
+ERROR
+'Parametrize outgoing calls'
+AT+CXXMOC=?
+ERROR
+'Voice hang up control'
+AT+CVHU=?
+ERROR
+'V.120 rate adaption control'
+AT+CV120=?
+ERROR
+'Subscriber number'
+AT+CNUM=?
+ERROR
+'Network registration'
+AT+CREG=?
++CREG: (0,1)
+OK
+'Operator selection'
+AT+COPS=?
+'Facility lock'
+ERROR
+'Change password'
+AT+CPWD=?
++CPWD: ("PS",8),("SC",8),("AO",4),("OI",4),("OX",4),("AI",4),("IR",4),("AB",4),("AG",4),("AC",4),("P2",8)
+OK
+'Calling line identification presentation'
+AT+CLIP=?
++CLIP: (0,1)
+OK
+'Calling line identification restriction'
+AT+CLIR=?
+ERROR
+'Connected line identification presentation'
+AT+COLP=?
+ERROR
+'Closed user group'
+AT+CCUG=?
+ERROR
+'Call forwarding'
+AT+CCFC=?
++CCFC: (0-5)
+OK
+'Call waiting'
+AT+CCWA=?
+ERROR
+'Call and hold multiparty'
+AT+CHLD=?
++CHLD: (0,1,1X,2,2X,3)
+OK
+'Call transfer'
+AT+CTFR=?
+ERROR
+'Unstructured supplementary service data'
+AT+CUSD=?
+ERROR
+'Advice of charge'
+AT+CAOC=?
++CAOC: (0)
+OK
+'Supplementary service notifications'
+AT+CSSN=?
++CSSN: (0,1),(0,1)
+OK
+'List current calls'
+AT+CLCC=?
+OK
+'Preferred operator list'
+AT+CPOL=?
+ERROR
+'Read operator names'
+AT+COPN=?
+OK
+'Phone activity status'
+AT+CPAS=?
++CPAS: (0,3,4)
+OK
+'Set phone functionality'
+AT+CFUN=?
+ERROR
+'Power off'
+AT+CPOF=?
+ERROR
+'Enter PIN'
+AT+CPIN=?
+OK
+'Enter PIN2'
+AT+CPIN2=?
+ERROR
+'Battery charge'
+AT+CBC=?
++CBC: (0-1),(0-100)
+OK
+'ME control mode'
+AT+CMEC=?
+ERROR
+'Keypad control'
+AT+CKPD=?
+ERROR
+'Display control'
+AT+CDIS=?
+ERROR
+'Indicator control'
+AT+CIND=?
+ERROR
+'ME event reporting'
+AT+CMER=?
+ERROR
+'Signal quality'
+AT+CSQ=?
++CSQ: (0-31,99),(0-7,99)
+OK
+'Select phonebook memory storage'
+AT+CPBS=?
++CPBS: ("FD","SM","ON","ME","LD","MC","RC")
+OK
+'Read phonebook entries'
+AT+CPBR=?
++CPBR: (1-125),20,16
+OK
+'Find phonebook entries'
+AT+CPBF=?
+ERROR
+'Write phonebook entry'
+AT+CPBW=?
++CPBW: (1-125),20,(128-255),16
+OK
+'Clock'
+AT+CCLK=?
+OK
+'Alarm'
+AT+CALA=?
+ERROR
+'Generic SIM access'
+AT+CSIM=?
+ERROR
+'Restricted SIM access'
+AT+CRSM=?
+OK
+'Secure control command'
+AT+CSCC=?
+ERROR
+'Select ringing tone'
+AT+CALM=?
++CALM: (0-2)
+OK
+'Ringing tone level'
+AT+CRSL=?
++CRSL: (1-5)
+OK
+'Vibrator tone'
+AT+CVIB=?
++CVIB: (0,1)
+OK
+'Volume control'
+AT+CLVL=?
++CLVL: (0-4)
+OK
+'Mute microphone'
+AT+CMUT=?
++CMUT: (0,1)
+OK
+'Accumulated call meter'
+AT+CACM=?
+OK
+'Accumulated call meter maximum'
+AT+CAMM=?
+OK
+'Price per unit and currency table'
+AT+CPUC=?
+OK
+'Call meter maximum event'
+AT+CCWE=?
+ERROR
+'Power class'
+AT+CPWC=?
+ERROR
+'Set language'
+AT+CLAN=?
+ERROR
+'Language event'
+AT+CLAE=?
+ERROR
+'Set greeting text'
+AT+CSGT=?
+ERROR
+'Set voice mail number'
+AT+CSVM=?
+ERROR
+'Ring melody playback'
+AT+CRMP=?
+ERROR
+'Master reset'
+AT+CMAR=?
+ERROR
+'List all available AT commands'
+AT+CLAC
+ERROR
+'ME error reporting'
+AT+CMEE=?
++CMEE: (0-2)
+OK
+'Enter SMS block mode'
+AT+CESP=?
+ERROR
+'Select message service'
+AT+CSMS=?
++CSMS: (0,1)
+OK
+'Preferred message store'
+AT+CPMS=?
++CPMS: ("SM"),("SM"),("SM")
+OK
+'Message format'
+AT+CMGF=?
++CMGF: (0)
+OK
+'Service center address'
+AT+CSCA=?
+OK
+'--------------------
+'Text mode'
+AT+CMGF=1
+ERROR
+'--------------------
+'Set text mode parameters'
+AT+CSMP=?
+ERROR
+'Show text mode parameters'
+AT+CSDH=?
+ERROR
+'List messages (text)'
+AT+CMGL=?
++CMGL: (0-4)
+OK
+'Read message (text)'
+AT+CMGR=?
+OK
+'New message acknowledgement to ME/TA (text)'
+AT+CNMA=?
+ERROR
+'Send message (text)'
+AT+CMGS=?
+OK
+'Send message from storage (text)'
+AT+CMSS=?
+OK
+'Write message to memory (text)'
+AT+CMGW=?
+OK
+'Delete message (text)'
+AT+CMGD=?
+OK
+'Send command (text)'
+AT+CMGC=?
+OK
+'---------------
+'PDU mode'
+AT+CMGF=0
+OK
+'--------------
+'List messages (pdu)'
+AT+CMGL=?
++CMGL: (0-4)
+OK
+'Read message (pdu)'
+AT+CMGR=?
+OK
+'New message acknowledgement to ME/TA (pdu)'
+AT+CNMA=?
+ERROR
+'Send message (pdu)'
+AT+CMGS=?
+OK
+'Send message from storage (pdu)'
+AT+CMSS=?
+OK
+'Write message to memory (pdu)'
+AT+CMGW=?
+OK
+'Delete message (pdu)'
+AT+CMGD=?
+OK
+'Send command (pdu)'
+AT+CMGC=?
+OK
+'Select cell broadcast message types'
+AT+CSCB=?
++CSCB: (0,1)
+OK
+'Save settings'
+AT+CSAS=?
+ERROR
+'Restore settings'
+AT+CRES=?
+ERROR
+'New message indications to TE'
+AT+CNMI=?
++CNMI: (0,1),(0,1),(0,2),(0,2),(1)
+OK
+'More messages to send'
+AT+CMMS=?
++CMMS: (0-2)
+OK
+
+' Complite AT-Command For Siemens M35i
+

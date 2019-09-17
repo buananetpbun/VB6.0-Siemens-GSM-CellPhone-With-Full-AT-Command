@@ -1,0 +1,686 @@
+
+' *************************************************************
+' AT+COMMAND For : S45  
+' According to ITU-T V.25ter
+' only the commands which effect GSM/UMTS
+' *************************************************************
+'Attention please
+AT
+OK
+'6.1.8 ISO system global object identification
+AT+GOI
+ERROR
+'6.1.9 Overall capabilities of TA
+AT+GCAP
++GCAP: +CGSM
+OK
+'6.1.10 Selects the country of installation
+AT+GCI=?
+ERROR
+'6.2.10 Fixed TE data rate
+AT+IPR=?
++IPR: (19200,38400,57600,115200)
+OK
+AT+IPR?
++IPR: 57600
+OK
+'6.2.11 Character framing
+AT+ICF=?
+ERROR
+AT+ICF?
+ERROR
+'6.2.12 Flow control
+AT+IFC=?
+ERROR
+AT+IFC?
+ERROR
+'6.2.13 Data rate
+AT+ILRR=?
+ERROR
+AT+ILRR?
+ERROR
+'According to PCCA STD-101:
+'Select wireless network
+AT+WS46=?
+(12)
+OK
+AT+WS46?
+12
+OK
+'According to 3GPP TS 27.007 version 3.7.0:
+'5.1 Request manufacturer identification
+AT+GMI
+SIEMENS
+OK
+AT+CGMI
+SIEMENS
+OK
+'5.2 Request model identification
+AT+GMM
+Gipsy Soft Protocolstack
+OK
+AT+CGMM
+S45
+OK
+'5.3 Request revision identification
+AT+GMR
+V2.550
+OK
+AT+CGMR
+05
+OK
+'5.4 Request product serial number identification
+'not used here, for privacy reasons
+AT+CGSN=?
+OK
+'5.5 Select TE character set
+AT+CSCS=?
++CSCS: ("GSM","UCS2")
+OK
+AT+CSCS?
++CSCS: "GSM"
+OK
+'5.6 Request international mobile subscriber identity
+'not used here, for privacy reasons
+AT+CIMI=?
+OK
+'5.7 Multiplexing mode
+AT+CMUX=?
+ERROR
+AT+CMUX?
+ERROR
+'6.1 Select type of address
+AT+CSTA=?
+ERROR
+AT+CSTA?
+ERROR
+'6.4 Call mode
+AT+CMOD=?
+ERROR
+AT+CMOD?
+ERROR
+'6.5 Hangup call
+AT+CHUP=?
+OK
+'6.7 Select bearer service type
+AT+CBST=?
++CBST: (0,4,6,7,14,68,70,71,75),(0),(1)
+OK
+AT+CBST?
++CBST: 7,0,1
+OK
+'6.8 Radio link protocol
+AT+CRLP=?
++CRLP: (0-61),(0-61),(48-255),(1-255)
+OK
+AT+CRLP?
++CRLP: 61,61,78,6
+OK
+'6.9 Service reporting control
+AT+CR=?
++CR: (0,1)
+OK
+AT+CR?
++CR: 0
+OK
+'6.10 Extended error report
+AT+CEER=?
+OK
+'6.11 Cellular result codes
+AT+CRC=?
++CRC: (0,1)
+OK
+AT+CRC?
++CRC: 0
+OK
+'6.12 HSCSD device parameters
+AT+CHSD=?
+ERROR
+AT+CHSD
+ERROR
+'6.13 HSCSD transparent call configuration
+AT+CHST=?
+ERROR
+AT+CHST?
+ERROR
+'6.14 HSCSD non-transparent call configuration
+AT+CHSN=?
+ERROR
+AT+CHSN?
+ERROR
+'6.15 HSCSD current call parameters
+AT+CHSC=?
+ERROR
+AT+CHSC?
+ERROR
+'6.16 HSCSD parameters report
+AT+CHSR=?
+ERROR
+AT+CHSR?
+ERROR
+'6.17 HSCSD automatic user initiated upgrading
+AT+CHSU=?
+ERROR
+AT+CHSU?
+ERROR
+'6.18 HSCSD non-transparent asymmetry configuration
+AT+CHSA=?
+ERROR
+AT+CHSA?
+ERROR
+'6.19 Single numbering scheme
+AT+CSNS=?
+ERROR
+AT+CSNS?
+ERROR
+'6.20 Voice Hangup Control
+AT+CVHU=?
+ERROR
+AT+CVHU?
+ERROR
+'6.21 V.120 rate adaption protocol
+AT+CV120=?
+ERROR
+AT+CV120?
+ERROR
+'6.22 Settings date format
+AT+CSDF=?
+ERROR
+AT+CSDF?
+ERROR
+'6.23 Silence Command
+AT+CSIL=?
+ERROR
+AT+CSIL?
+ERROR
+'6.24 Settings time format
+AT+CSTF=?
+ERROR
+AT+CSTF?
+ERROR
+'7.1 Subscriber number
+'not used here, for privacy reasons
+AT+CNUM=?
+ERROR
+'7.2 Network registration
+'not used here, for privacy reasons
+AT+CREG=?
++CREG: (0-2)
+OK
+'7.3 Operator selection
+'not used here, for privacy reasons
+AT+COPS=?
++COPS: (2,"RUS SMARTS",,"25007"),(3,"NorthWestGSM RUS",,"25002"),,(0,1,3,4),(0,2)
+OK
+'7.4 Facility lock
+AT+CLCK=?
++CLCK: ("CS","PS","PF","SC","AO","OI","OX","AI","IR","AB","AG","AC","FD","PN","PU","PP","PC")
+OK
+'7.5 Change password
+AT+CPWD=?
++CPWD: ("PS",8),("PF",8),("SC",8),("AO",4),("OI",4),("OX",4),("AI",4),("IR",4),("AB",4),("AG",4),("AC",4),("PN",8),("PU",8),("PP",8),("PC",8),("P2",8)
+OK
+'7.6 Calling line identification presentation
+AT+CLIP=?
++CLIP: (0,1)
+OK
+'7.7 Calling line identification restriction
+AT+CLIR=?
++CLIR: (0-2)
+OK
+'7.8 Connected line identification presentation
+AT+COLP=?
++COLP: (0,1)
+OK
+'7.9 Called line identification presentation
+AT+CDIP=?
+ERROR
+'7.10 Closed user group
+AT+CCUG=?
+ERROR
+'7.11 Call forwarding number and conditions
+AT+CCFC=?
++CCFC: (0-5)
+OK
+'7.12 Call waiting
+AT+CCWA=?
++CCWA: (0,1)
+OK
+AT+CCWA?
++CCWA: 0
+OK
+'7.13 Call related supplementary services
+AT+CHLD=?
++CHLD: (0,1,1X,2,2X,3)
+OK
+'7.14 Call deflection
+AT+CTFR=?
+ERROR
+'7.15 Unstructured supplementary service data
+AT+CUSD=?
+ERROR
+AT+CUSD?
+ERROR
+'7.16 Advice of Charge
+AT+CAOC=?
++CAOC: (0)
+OK
+AT+CAOC?
++CAOC: 0
+OK
+'7.17 Supplementary service notifications
+AT+CSSN=?
++CSSN: (0,1),(0,1)
+OK
+AT+CSSN?
++CSSN: 0,0
+OK
+'7.18 List current calls
+'not used here, for privacy reasons
+AT+CLCC=?
+OK
+'7.19 Preferred operator list
+'not used here, for privacy reasons
+AT+CPOL=?
++CPOL: (1-8),(2)
+OK
+'7.20 Read operator names
+'not used here, for privacy reasons
+AT+COPN=?
+OK
+'7.21 eMLPP Priority Registration and Interrogation
+'not used here, for privacy reasons
+AT+CAEMLPP=?
+ERROR
+'8.1 Phone activity status
+AT+CPAS=?
++CPAS: (0,3,4)
+OK
+'8.2 Set phone functionality
+AT+CFUN=?
+ERROR
+AT+CFUN?
+ERROR
+'8.3 Enter PIN
+AT+CPIN?
++CPIN: READY
+OK
+'8.4 Battery charge
+AT+CBC=?
++CBC: (0-1),(0-100)
+OK
+'8.5 Signal quality
+AT+CSQ=?
++CSQ: (0-31,99),(0-7,99)
+OK
+'8.6 Mobile Equipment control mode
+AT+CMEC=?
+ERROR
+AT+CMEC?
+ERROR
+'8.7 Keypad control
+AT+CKPD=?
+ERROR
+'8.8 Display control
+AT+CDIS=?
+ERROR
+'8.9 Indicator control
+AT+CIND=?
+ERROR
+'8.10 Mobile Equipment event reporting
+AT+CMER=?
+ERROR
+AT+CMER?
+ERROR
+'8.11 Select phonebook memory storage
+AT+CPBS=?
++CPBS: ("FD","SM","ON","ME","LD","MC","RC")
+OK
+AT+CPBS?
++CPBS: "SM",51,100
+OK
+'8.12 Read phonebook entries
+AT+CPBR=?
++CPBR: (1-100),20,16
+OK
+AT+CPBR?
+ERROR
+'8.13 Find phonebook entries
+AT+CPBF=?
+ERROR
+'8.14 Write phonebook entry
+AT+CPBW=?
++CPBW: (1-100),20,(128-255),16
+OK
+'8.15 Clock
+AT+CCLK=?
+OK
+AT+CCLK?
++CCLK: "01/01/01,00:09:15"
+OK
+'8.16 Alarm
+AT+CALA=?
+ERROR
+AT+CALA?
+ERROR
+'8.17 Generic SIM access
+AT+CSIM=?
+ERROR
+'8.18 Restricted SIM access
+AT+CRSM=?
+OK
+'8.19 Secure control command
+AT+CSCC=?
+ERROR
+'8.20 Alert sound mode
+AT+CALM=?
++CALM: (0-2)
+OK
+AT+CALM?
++CALM: 0
+OK
+'8.21 Ringer sound level
+AT+CRSL=?
++CRSL: (1-5)
+OK
+'8.22 Vibrator mode
+AT+CVIB=?
++CVIB: (0,1)
+OK
+'8.23 Loudspeaker volume level
+AT+CLVL=?
++CLVL: (0-4)
+OK
+'8.24 Mute control
+AT+CMUT=?
++CMUT: (0,1)
+OK
+'8.25 Accumulated call meter
+AT+CACM=?
+OK
+'8.26 Accumulated call meter maximum
+AT+CAMM=?
+OK
+'8.27 Price per unit and currency table
+AT+CPUC=?
+OK
+'8.28 Call Meter maximum event
+AT+CCWE=?
+ERROR
+'8.29 Power class
+AT+CPWC=?
+ERROR
+AT+CPWC?
+ERROR
+'8.30 Set Language
+AT+CLAN=?
+ERROR
+'8.31 Language Event
+AT+CLAE=?
+ERROR
+AT+CLAE?
+ERROR
+'8.32 Set Greeting Text
+AT+CSGT=?
+ERROR
+'8.33 Set Voice Mail Number
+AT+CSVM=?
+ERROR
+'8.34 Ring Melody Playback
+AT+CRMP=?
+ERROR
+'8.35 Master Reset
+AT+CMAR=?
+ERROR
+'8.36 List all available AT commands
+AT+CLAC
+ERROR
+'8.37 Delete alarm
+AT+CALD=?
+ERROR
+'8.38 Postpone or dismiss an alarm
+AT+CAPD=?
+ERROR
+'8.39 Automatic Time Zone Update
+AT+CTZU=?
+ERROR
+AT+CTZU?
+ERROR
+'8.40 Time Zone Reporting
+AT+CTZR=?
+ERROR
+AT+CTZR?
+ERROR
+'8.41 Enter protocol mode
+AT+CPROT=?
+ERROR
+'9.1 Report Mobile Equipment error
+AT+CMEE=?
++CMEE: (0-2)
+OK
+'10.1.1 Define PDP Context
+AT+CGDCONT=?
++CGDCONT: (1-2),"PPP",,,(0),(0)
++CGDCONT: (1-2),"IP",,,(0),(0)
+OK
+'10.1.2 Define Secondary PDP Context
+AT+CGDSCONT=?
+ERROR
+'10.1.3 Traffic Flow Template
+AT+CGTFT=?
+ERROR
+'10.1.4 Quality of Service Profile (Requested)
+AT+CGQREQ=?
++CGQREQ: "PPP",(0-3),(0-4),(0-5),(0-9),(0-18,31)
++CGQREQ: "IP",(0-3),(0-4),(0-5),(0-9),(0-18,31)
+OK
+'10.1.5 Quality of Service Profile (Minimum acceptable)
+AT+CGQMIN=?
++CGQMIN: "PPP",(0-3),(0-4),(0-5),(0-9),(0-18,31)
++CGQMIN: "IP",(0-3),(0-4),(0-5),(0-9),(0-18,31)
+OK
+'10.1.6 3G Quality of Service Profile (Requested)
+AT+CGEQREQ=?
+ERROR
+'10.1.7 3G Quality of Service Profile (Minimum acceptable)
+AT+CGEQMIN=?
+ERROR
+'10.1.8 3G Quality of Service Profile (Negotiated)
+AT+CGEQNEG=?
+ERROR
+'10.1.9 PS attach or detach
+AT+CGATT=?
++CGATT: (0,1)
+OK
+'10.1.10 PDP context activate or deactivate
+AT+CGACT=?
++CGACT: (0,1)
+OK
+'10.1.11 PDP Context Modify
+AT+CGCMOD=?
+ERROR
+'10.1.12 Enter data state
+AT+CGDATA=?
++CGDATA: ("PPP")
+OK
+'10.1.13 Configure local Octet Stream PAD parameters
+AT+CGCLOSP=?
+ERROR
+'10.1.14 Show PDP address
+AT+CGPADDR=?
+OK
+'10.1.15 Automatic response to a network request for PDP context activation
+AT+CGAUTO=?
++CGAUTO: (0,1,3)
+OK
+'10.1.16 Manual response to a network request for PDP context activation
+AT+CGANS=?
++CGANS: (0-1),("PPP")
+OK
+'10.1.17 GPRS mobile station class
+AT+CGCLASS=?
++CGCLASS: ("B")
+OK
+AT+CGCLASS?
++CGCLASS: "B"
+OK
+'10.1.12 Configure local triple-X PAD parameters
+AT+CGCLPAD=?
+ERROR
+'10.1.18 Packet Domain event reporting
+AT+CGEREP=?
++CGEREP: (0-2),(0-1)
+OK
+'10.1.19 GPRS network registration status
+AT+CGREG=?
++CGREG: (0,1)
+OK
+'10.1.20 Select service for MO SMS messages
+AT+CGSMS=?
++CGSMS: (0-3)
+OK
+'11.1.1 Accept an incoming Voice Group or Voice Broadcast Call
+AT+CAJOIN=?
+ERROR
+'11.1.2 Reject an incoming Voice Group or Voice Broadcast Call
+AT+CAREJ=?
+ERROR
+'11.1.3 Leave an ongoing Voice Group or Voice Broadcast Call
+AT+CAHLD=?
+ERROR
+'11.1.4 Talker Access for Voice Group Call
+AT+CAPTT=?
+ERROR
+'11.1.5 Voice Group Call Uplink Status Presentation
+AT+CAULEV=?
+ERROR
+'11.1.6 List current Voice Group and Voice Broadcast Calls
+AT+CALCC=?
+ERROR
+'11.1.7 Voice Group or Voice Broadcast Call State Attribute Presentation
+AT+CACSP=?
+ERROR
+'11.1.8 NCH Support Indication
+AT+CANCHEV=?
+ERROR
+'According to 3GPP TS 27.005 version 3.1.0:
+'3.2.1 Select Message Service
+AT+CSMS=?
++CSMS: (0,1)
+OK
+AT+CSMS?
++CSMS: 0,1,1,1
+OK
+'3.2.2 Preferred Message Storage
+AT+CPMS=?
++CPMS: ("SM"),("SM"),("SM")
+OK
+AT+CPMS?
++CPMS: "SM",11,18,"SM",11,18,"SM",11,18
+OK
+'3.2.3 Message Format
+AT+CMGF=?
++CMGF: (0)
+OK
+AT+CMGF?
++CMGF: 0
+OK
+'3.2.4 Enter SMS Block Mode Protocol
+AT+CESP=?
+ERROR
+'3.3.1 Service Centre Address
+AT+CSCA=?
+OK
+'3.3.2 Set Text Mode Parameters
+AT+CSMP=?
+ERROR
+AT+CSMP?
+ERROR
+'3.3.3 Show Text Mode Parameters
+AT+CSDH=?
+ERROR
+AT+CSDH?
+ERROR
+'3.3.4 Select Cell Broadcast Message Types
+AT+CSCB=?
++CSCB: (0,1)
+OK
+AT+CSCB?
++CSCB: 0,"",""
+OK
+'3.3.5 Save Settings
+AT+CSAS=?
+ERROR
+'3.3.6 Restore Settings
+AT+CRES=?
+ERROR
+'3.4.1 New Message Indications to TE
+AT+CNMI=?
++CNMI: (0,1),(0,1),(0,2),(0,2),(1)
+OK
+AT+CNMI?
++CNMI: 0,0,0,0,1
+OK
+'3.5.4 Delete Message
+AT+CMGD=?
+OK
+'3.5.6 More Messages to Send
+AT+CMMS=?
++CMMS: (0-2)
+OK
+'SMS Text mode
+AT+CMGF=1
+ERROR
+'3.4.2 List Messages
+AT+CMGL=?
++CMGL: (0-4)
+OK
+'3.4.3 Read Message
+AT+CMGR=?
+OK
+'3.4.4 New Message Acknowledgement to ME/TA
+AT+CNMA=?
++CNMA: (0)
+OK
+'3.5.1 Send Message
+AT+CMGS=?
+OK
+'3.5.2 Send Message from Storage
+AT+CMSS=?
+OK
+'3.5.3 Write Message to Memory
+AT+CMGW=?
+OK
+'3.5.5 Send Command
+AT+CMGC=?
+OK
+'SMS PDU mode
+AT+CMGF=0
+OK
+'4.1 List Messages
+AT+CMGL=?
++CMGL: (0-4)
+OK
+'4.2 Read Message
+AT+CMGR=?
+OK
+'4.3 Send Message
+AT+CMGS=?
+OK
+'4.4 Write Message to Memory
+AT+CMGW=?
+OK
+'4.5 Send Command
+AT+CMGC=?
+OK
+'4.6 New Message Acknowledgement to ME/TA
+AT+CNMA=?
++CNMA: (0)
+OK
+'4.7 Send Message from Storage
+AT+CMSS=?
+OK
+
+' Complite AT-Command For Siemens S45
+
+
