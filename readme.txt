@@ -8,5 +8,3 @@ For example : AT+CGMI = output [SIEMENS], AT+CGMM = output [C45], Access Midi (s
 , Access Logo = example : AT^SBNW="bmp",0,0 and any other.  
 
 <img border="0" src="https://www.planet-source-code.com/upload_PSC/screenshots/PIC2002104318386246.gif" />
-
-
