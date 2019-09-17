@@ -1,4 +1,4 @@
-Avaco - [New ! Access Siemens GSM CellPhone With Full AT+Command]
+Access Siemens GSM CellPhone With Full AT+Command - VISUAL BASIC 6.0
 
 This is a full AT+Command for access Siemens GSM CellPhone.
 before run this program you must have a Com port serial cabel for Siemens.
