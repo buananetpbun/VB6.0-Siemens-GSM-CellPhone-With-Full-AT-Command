@@ -7,6 +7,7 @@ with this program you can know how to access siemens with AT+Command.
 For example : AT+CGMI = output [SIEMENS], AT+CGMM = output [C45], Access Midi (sound) = AT^SBNW="mid",0,1 > 4D5468640000000..... (CTRL-Z)
 , Access Logo = example : AT^SBNW="bmp",0,0 and any other.  
 
-![image](https://user-images.githubusercontent.com/42666125/111259327-426f5e80-8651-11eb-8bbc-57ca31e4a1f7.png)
+![image](https://user-images.githubusercontent.com/42666125/111259508-9c702400-8651-11eb-8940-937ae2ea825c.png)
+
 
 <img style="float:right; padding-top:10px" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fbuananetpbun.github.io%2F&count_bg=%23C83D3D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" alt="Hits"/>
